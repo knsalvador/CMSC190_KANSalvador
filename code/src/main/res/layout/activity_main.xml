@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textdashboard"
+                android:text="Dashboard"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="6dp"
+                android:layout_below="@id/textdashboard"
+                android:text="Kate's aquarium"
+                android:textSize="14sp"
+                android:textColor="#52BAFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:layout_marginTop="30dp"
+            android:columnCount="2"
+            android:rowCount="1"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="0"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp"
+                >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="210dp">
+
+                    <RelativeLayout
+                        android:layout_width="128dp"
+                        android:layout_height="128dp">
+
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/tempgauge"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:gaugeStartAngle="135"
+                            app:gaugeSweepAngle="270"
+                            app:gaugeStartValue="0"
+                            app:gaugeEndValue="50"
+                            app:gaugePointEndColor="#3A29D6"
+                            app:gaugePointStartColor="#7EC6E6"
+                            app:gaugeStrokeCap="ROUND"
+                            app:gaugeStrokeColor="#D6D6D6"
+                            app:gaugeStrokeWidth="12dp" />
+                        <TextView
+                            android:id="@+id/temperatureval"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="42sp"
+                            android:gravity="center"
+                            android:text="00"
+                            android:layout_centerVertical="true"/>
+                        <TextView
+                            android:id="@+id/tempstartend"
+                            android:textSize="8sp"
+                            android:text="00                               50"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/temperatureval"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/tempunit"
+                            android:textSize="20sp"
+                            android:text="°C"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/tempstartend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:textColor="#6f6f6f"
+                        android:textSize="18sp"
+                        android:text="Temperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="0"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp"
+                >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="128dp"
+                        android:layout_height="128dp">
+
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/phgauge"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:gaugeStartAngle="135"
+                            app:gaugeSweepAngle="270"
+                            app:gaugeStartValue="0"
+                            app:gaugeEndValue="14"
+                            app:gaugePointEndColor="#3A29D6"
+                            app:gaugePointStartColor="#7EC6E6"
+                            app:gaugeStrokeCap="ROUND"
+                            app:gaugeStrokeColor="#D6D6D6"
+                            app:gaugeStrokeWidth="12dp" />
+                        <TextView
+                            android:id="@+id/phval"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="42sp"
+                            android:gravity="center"
+                            android:text="00"
+                            android:layout_centerVertical="true"/>
+                        <TextView
+                            android:id="@+id/phstartend"
+                            android:textSize="8sp"
+                            android:text="00                               14"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/phval"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_marginTop="12dp"
+                        android:textColor="#6f6f6f"
+                        android:textSize="18sp"
+                        android:text="pH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="0"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp"
+                >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="128dp"
+                        android:layout_height="128dp">
+
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/turbgauge"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:gaugeStartAngle="135"
+                            app:gaugeSweepAngle="270"
+                            app:gaugeStartValue="0"
+                            app:gaugeEndValue="15"
+                            app:gaugePointEndColor="#3A29D6"
+                            app:gaugePointStartColor="#7EC6E6"
+                            app:gaugeStrokeCap="ROUND"
+                            app:gaugeStrokeColor="#D6D6D6"
+                            app:gaugeStrokeWidth="12dp" />
+                        <TextView
+                            android:id="@+id/turbidityval"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="42sp"
+                            android:gravity="center"
+                            android:text="00"
+                            android:layout_centerVertical="true"/>
+                        <TextView
+                            android:id="@+id/turbstartend"
+                            android:textSize="8sp"
+                            android:text="00                               15"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/turbidityval"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/turbunit"
+                            android:textSize="20sp"
+                            android:text="NTU"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@id/turbstartend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_marginTop="12dp"
+                        android:textColor="#6f6f6f"
+                        android:textSize="18sp"
+                        android:text="Turbidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="0"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp"
+                >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:gravity="center"
+                        android:width="123dp"
+                        android:height="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/lightstatus"
+                        android:textStyle="bold"
+                        android:textSize="35sp"
+                        android:text="Light is"/>
+                    <Button
+                        android:id="@+id/lightswitch"
+                        android:layout_marginTop="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_margin="12dp"
+                android:id="@+id/savebutton"
+                android:layout_width="137dp"
+                android:layout_height="50dp"
+                android:text="Save current stats"
+                android:layout_gravity="center"
+                android:textAllCaps="false" />
+            <Button
+                android:layout_margin="12dp"
+                android:id="@+id/historybutton"
+                android:layout_width="137dp"
+                android:layout_height="50dp"
+                android:text="See history"
+                android:layout_gravity="center"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
