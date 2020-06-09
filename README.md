@@ -1,2 +1,4 @@
-# CMSC190_KANSalvador
-by Katrina Anne N. Salvador [2nd, AY 2019-2020]
+# Nemo: An Arduino Aquarium Monitoring SystemControlled by An Android Mobile Application
+
+Authors: Katrina Anne N. Salvador and Prof. Jaime M. Samaniego
+Abstract - 
